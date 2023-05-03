@@ -1,18 +1,19 @@
-import React from 'react'
-import Layout from '../components/Layout'
-import classes from './Home.module.css'
+import React from 'react';
+
+
+
+
+import Compose from '../components/Compose';
 
 const Home = () => {
+
+  
+
   return (
+    <React.Fragment>
+      <Compose />
+     </React.Fragment>
+  );
+};
 
-      <div className={classes.home}>
-        <p>
-            WELCOME TO EXPENSE TRACKER !!!
-        </p>
-
-        </div>
-
-  )
-}
-
-export default Home
+export default Home;
