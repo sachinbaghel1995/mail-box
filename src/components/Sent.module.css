@@ -1,0 +1,9 @@
+.main {
+    box-sizing: border-box;
+    width: 700px;
+    margin: auto;
+    margin-right: 120px;
+    margin-top: 150px;
+    margin-left: 300px;
+    background-color: azure;
+  }

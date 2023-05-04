@@ -1,0 +1,46 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: azure;
+    padding-top: 120px;
+    margin-left: 1350px;
+  }
+  
+  .sidebar button {
+    text-align: center;
+    margin: 1em;
+    margin-top: 2em;
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: seagreen;
+    border: none;
+    width: 74%;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .sidebar li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 1em;
+    padding: 1rem;
+    font-size: 20px;
+    font-family: cursive;
+    cursor: pointer;
+  }
+  
+  .sidebar .sent,
+  .sidebar .received {
+    color: white;
+    font-weight: bold;
+    background-color: seagreen;
+    border-left: black 5px solid;
+    /* border-right: black 5px solid;
+    border-top: black 5px solid;
+    border-bottom: black 5px solid; */
+    border-radius: 10px;
+  }

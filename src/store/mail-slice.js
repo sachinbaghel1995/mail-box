@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = { mailData: [], firstTime: true};
+const initialState = { mailData: [], firstTime: true, unreadMessageCount: 0 };
 
 const mailSlice = createSlice({
   name: 'mail',
@@ -9,10 +9,15 @@ const mailSlice = createSlice({
     firstTime(state, action) {
       state.firstTime = action.payload;
     },
-   
+    replace(state, action) {
+      state.mailData = action.payload.mailData;
+      state.firstTime = false;
+      // console.log(state.mailData);
+      state.unreadMessageCount = action.payload.unreadMessageCount;
+    },
     add(state, action) {
       state.mailData = [action.payload, ...state.mailData];
-    //   console.log(state.mails);
+      // console.log(state.mails);
     },
    
   },
