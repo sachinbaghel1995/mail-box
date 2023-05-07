@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 
 import classes from './MailData.module.css';
 import { replaceMail } from '../store/mail-actions';
+import { deleteMail } from '../store/mail-actions';
 
 
 const MailData = (props) => {
@@ -39,6 +40,9 @@ const MailData = (props) => {
       }
     }
     };
+    const removeMailHandler = () => {
+        dispatch(deleteMail(props.mail));
+      }
     
  
 
@@ -60,6 +64,7 @@ const MailData = (props) => {
         </div>
         <div className={showBody ? classes.body : classes.notBody}>
                   <div>{props.mail.text}</div>
+      <i onClick={removeMailHandler} className="ri-delete-bin-6-fill">delete</i>
          
         </div>
       </div>

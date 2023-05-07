@@ -81,6 +81,31 @@ export const replaceMail = (emailUrl, loggedUserEmail) => {
         }
       };
     };
+    export const deleteMail = (mail) => {
+        const userEmail = JSON.parse(localStorage.getItem('idToken')).email;
+        const emailUrl = userEmail.replace('@','').replace('.','');
+      
+        return async (dispatch) => {
+          try {
+            const response = await fetch(
+              `https://mail-box-a609f-default-rtdb.firebaseio.com//${emailUrl}/${mail.id}.json`,
+              {
+                method: 'DELETE',
+              }
+            );
+      
+            const data = await response.json();
+      
+            if (response.ok) {
+              dispatch(mailActions.remove(mail));
+          } else {
+            throw data.error;
+          }
+        } catch (error) {
+          console.log(error.message);
+        }
+      };
+    };
     
    
   
