@@ -21,13 +21,13 @@ const Home = () => {
     dispatch(replaceMail(emailUrl, loggedUserEmail));
   }
 
-//   setInterval(() => {
-//     if (isLoggedIn) {
-//       const loggedUserEmail = JSON.parse(localStorage.getItem('idToken')).email;
-//       const emailUrl = loggedUserEmail.replace('@', '').replace('.', '');
-//       dispatch(updateMail(emailUrl, loggedUserEmail, currentMailData));
-//     }
-//   }, 5000);
+  setInterval(() => {
+    if (isLoggedIn) {
+      const loggedUserEmail = JSON.parse(localStorage.getItem('idToken')).email;
+      const emailUrl = loggedUserEmail.replace('@', '').replace('.', '');
+      dispatch(updateMail(emailUrl, loggedUserEmail, currentMailData));
+    }
+  }, 5000);
 
   return (
     <React.Fragment>
