@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgb(206, 241, 241);
+    background-color: rgb(237, 173, 117);
     padding: 15px 0 15px 0;
     z-index: 2;
   }
@@ -22,7 +22,7 @@
   .mainNav a {
     text-decoration: none;
     font-size: 25px;
-    color: seagreen;
+    color: rgb(108, 126, 30);
     font-weight: bold;
     font-family: sans-serif;
   }

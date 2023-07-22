@@ -1,11 +1,13 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import classes from './SideBar.module.css';
-import { showActions } from '../store/show-slice';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import classes from "./SideBar.module.css";
+import { showActions } from "../../store/show-slice";
 
 const Sidebar = () => {
   const state = useSelector((state) => state.show);
-  const unreadMessageCount = useSelector(state => state.mail.unreadMessageCount)
+  const unreadMessageCount = useSelector(
+    (state) => state.mail.unreadMessageCount
+  );
   const dispatch = useDispatch();
 
   const composeHandler = () => {
@@ -27,13 +29,14 @@ const Sidebar = () => {
       </button>
       <li
         onClick={receivedHandler}
-        className={state.received ? classes.received : ''}
+        className={state.received ? classes.received : ""}
       >
         <span>Inbox</span>
-        <span>{unreadMessageCount > 0 ? unreadMessageCount : ''}</span>
+        <span>{unreadMessageCount > 0 ? unreadMessageCount : ""}</span>
       </li>
-      <li onClick={sentHandler} className={state.sent ? classes.sent : ''}>
-        Sent
+      <li onClick={sentHandler} className={state.sent ? classes.sent : ""}>
+        <span>Sent</span>
+        <span>{unreadMessageCount > 0 ? unreadMessageCount : ""}</span>
       </li>
     </div>
   );

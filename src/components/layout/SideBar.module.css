@@ -3,9 +3,9 @@
     top: 0;
     width: 200px;
     height: 100vh;
-    background-color: azure;
+    background-color: rgb(244, 224, 191);
     padding-top: 120px;
-    margin-left: 1350px;
+    margin-right: 1350px;
   }
   
   .sidebar button {
@@ -15,7 +15,7 @@
     padding: 1rem;
     font-size: 20px;
     font-weight: bold;
-    background-color: seagreen;
+    background-color: rgb(221, 148, 106);
     border: none;
     width: 74%;
     cursor: pointer;
@@ -37,7 +37,7 @@
   .sidebar .received {
     color: white;
     font-weight: bold;
-    background-color: seagreen;
+    background-color: rgb(231, 151, 77);
     border-left: black 5px solid;
     /* border-right: black 5px solid;
     border-top: black 5px solid;

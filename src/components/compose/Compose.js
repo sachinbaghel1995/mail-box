@@ -6,7 +6,7 @@ import { EditorState } from 'draft-js';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 import classes from './Compose.module.css';
-import { addMail } from '../store/mail-actions';
+import { addMail } from '../../store/mail-actions';
 
 const Compose = () => {
   const dispatch = useDispatch();
@@ -34,7 +34,7 @@ const Compose = () => {
       title: titleRef.current.value,
       text: editorState.getCurrentContent().getPlainText(),
     };
-    dispatch(addMail(mailData, clearInputFields));
+    dispatch(addMail(mailData,clearInputFields));
   };
 
   return (

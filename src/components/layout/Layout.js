@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import MainNavigation from './MainNavigation';
+import MainNavigation from "../navigation/MainNavigation";
 
 const Layout = (props) => {
   return (

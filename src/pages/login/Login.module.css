@@ -41,7 +41,7 @@
     width: 60%;
     padding: 8px 0 8px 0;
     border-radius: 25px;
-    background-color: seagreen;
+    background-color: rgb(226, 152, 77);
     font-size: 18px;
   }
   
@@ -50,6 +50,6 @@
     margin-top: 50px;
     font-size: 18px;
     cursor: pointer;
-    border-bottom: 2px solid seagreen;
+    border-bottom: 2px solid rgb(225, 177, 73);
     width: fit-content;
   }

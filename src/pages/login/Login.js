@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import classes from "./Login.module.css";
-import { authActions } from "../store/auth-slice";
-
+import { authActions } from "../../store/auth-slice";
 
 const Login = () => {
   const [hasAccount, setHasAccount] = useState(true);
@@ -56,10 +55,8 @@ const Login = () => {
       if (response.ok) {
         localStorage.setItem("idToken", JSON.stringify(data));
         dispatch(authActions.login());
-        navigate('/home');
-           console.log('user has succesfully signed up')
-           
-        
+        navigate("/home");
+        console.log("user has succesfully signed up");
       } else {
         throw data.error;
       }
