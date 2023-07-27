@@ -47,7 +47,7 @@ export const addMail = (mail, clearInput) => {
   };
 };
 
-export const replaceMail = (emailUrl, loggedUserEmail) => {
+export const readMail = (emailUrl, loggedUserEmail) => {
     return async (dispatch) => {
       try {
         const response = await fetch(

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
 import classes from "./MailData.module.css";
-import { replaceMail } from "../../store/mail-actions";
+import { readMail } from "../../store/mail-actions";
 import { deleteMail } from "../../store/mail-actions";
 
 const MailData = (props) => {
@@ -19,7 +19,7 @@ const MailData = (props) => {
         const response = await fetch(
           `https://mailbox-7121f-default-rtdb.firebaseio.com/${email}/${props.mail.id}.json`,
           {
-            method: "PUT",
+            method: "GET",
             body: JSON.stringify({ ...props.mail, read: true }),
             headers: {
               "Content-Type": "application/json",
@@ -32,7 +32,7 @@ const MailData = (props) => {
         if (!response.ok) {
           throw data.error;
         } else {
-          dispatch(replaceMail(emailUrl, loggedUserEmail));
+          dispatch(readMail(emailUrl, loggedUserEmail));
         }
       } catch (error) {
         console.log(error.message);

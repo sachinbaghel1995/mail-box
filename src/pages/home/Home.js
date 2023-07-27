@@ -5,7 +5,7 @@ import SideBar from "../../components/layout/SideBar";
 import Compose from "../../components/compose/Compose";
 import Sent from "../../components/sent/Sent";
 import Received from "../../components/receive/Received";
-import { replaceMail } from "../../store/mail-actions";
+import { readMail } from "../../store/mail-actions";
 
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
   if (isLoggedIn && firstTime) {
     const loggedUserEmail = JSON.parse(localStorage.getItem("idToken")).email;
     const emailUrl = loggedUserEmail.replace("@", "").replace(".", "");
-    dispatch(replaceMail(emailUrl, loggedUserEmail));
+    dispatch(readMail(emailUrl, loggedUserEmail));
   }
 
   // setInterval(() => {
